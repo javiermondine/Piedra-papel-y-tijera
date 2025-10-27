@@ -4,8 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .buttons {
+            margin: 30px 0;
+        }
+        
+        button {
+            font-size: 18px;
+            padding: 15px 30px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        
+        #results {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            min-height: 100px;
+        }
+        
+        #score {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        #round-result {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        
+        #final-result {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 20px 0;
+        }
+        
+        #reset-btn {
+            margin-top: 20px;
+            background-color: #008CBA;
+        }
+        
+        #reset-btn:hover {
+            background-color: #007399;
+        }
+    </style>
 </head>
 <body>
+    <h1>Rock Paper Scissors</h1>
+    <p>First to 5 points wins!</p>
+    
+    <div class="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    
+    <div id="results">
+        <div id="score">You: 0 | Computer: 0</div>
+        <div id="round-result"></div>
+        <div id="final-result"></div>
+        <button id="reset-btn" style="display: none;">Play Again</button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
